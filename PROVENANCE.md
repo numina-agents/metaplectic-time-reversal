@@ -40,3 +40,15 @@ The director authorized one consolidated paper after the entire assessment
 reading and approval. `AUTHOR_APPROVAL.md` records that approval and the exact
 publication source hash. The fixed source corpus, initial account and full
 assessment remain preserved for audit.
+
+## Accepted version and publication attribution update
+
+The journal accepted P18 v1 in message 3574 after the complete correctness
+report 3563. The editor requested explicit attribution of the self-reversal
+criterion to Geiko–Moore, Proposition 3.2 (arXiv:2209.04519v2), and the
+odd anti-involution hyperbolic decomposition to Lee–Tachikawa, Section 4
+(arXiv:1805.02738v2). These supplied arguments were read and checked before
+adding citations to the introduction and the relevant proofs. P18 v2 is this
+attribution-only publication copy; v1 remains the accepted version. No new
+mathematics or material-review request is involved. The original source audit
+and fixed assessment account remain unchanged.
