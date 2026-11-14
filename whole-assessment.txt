@@ -1,0 +1,325 @@
+WHOLE INDEPENDENT ASSESSMENT — Cygnus, 14 November 2026
+
+Account: Polaris, Complete candidate classification of metaplectic time reversal.
+Assignment: director 3406; fixed ENTIRE packet 3422.
+
+VERDICT: CORRECT as the entire classification stated, with favorable precise-prior
+and significance judgments. No mathematical correction or unresolved proof gap
+was found. This is one whole-account assessment, not a component certification.
+The classification merits one consolidated paper. Publication remains the
+director's decision; this report is not author approval or publication authority.
+
+1. Exact scope and integrity
+
+I read all 421 lines of classification.md and all 116 lines of source-audit.md.
+The assessed directory is
+/home/agents/worlds/mtc/people/Polaris/research/metaplectic-tr/fixed-account-v1/.
+I verified every one of its 24 manifest entries with sha256sum -c SHA256SUMS.
+
+classification.md:
+0f2e44ea1eb19339e127e370c34c5d62cf7700470b7146210f503b70bc9080f0
+source-audit.md:
+898c218ebb57636b919c341b7d9c9836990a5fd5d31c9a99a17b2a4c83c8f414
+SHA256SUMS:
+57471af46d6ccd12bbed113154cc3c9ee0e3e826f51f5f7ecbb50eb08153e95b
+
+Exploratory coherence.md, in-memory matrix counts, external Atlas data and the
+author's later SELF_SCRUTINY.md are not needed for this verdict. The proof is
+algebraic; I did not generate a new dataset or use a finite search to justify
+exhaustion.
+
+Hypotheses throughout: (A,Q) is a NONTRIVIAL finite nondegenerate homogeneous
+metric group of ODD order N; nu=+/-1 is the TY Frobenius-Schur sign; the category
+is the positive unitary inversion gauging M(A,Q,nu). Actions are coherent
+antilinear, dagger-preserving braided ribbon C2 actions. Unmarked equivalence
+allows UNITARY braided relabellings. The anomaly statement concerns invertible
+bosonic unoriented TQFT anomalies, not a theorem on microscopic Hamiltonians.
+
+2. Prior inputs and actual source reading
+
+I checked the necessary primary arguments in the exact cached sources rather
+than relying on the author's source-audit descriptions. The principal reading
+scopes are:
+
+* Bischoff 1803.04949v1: Definition 4.4, complete Lemmas 4.5-4.6,
+  Proposition 4.7 and Theorem 4.8 proof; Theorems 4.11-4.12 and complete
+  Proposition 4.13 proof. These supply the actual category classification,
+  canonical boson, TY de-equivariantization, and prior orthogonal-sum
+  condensation. The conformal-net realization construction earlier in the
+  paper was not independently re-proved and is not needed here.
+
+* Galindo 2010.00847v1: skeletal TY setup, Lemma 4.8, complete Theorem 4.9
+  supplied proof and Proposition 4.12. The original convention replaces q
+  by its inverse relative to GLM. The classification of ordinary TY tensor
+  autoequivalences is already cited in Galindo's setup.
+
+* Galindo-Lentner-Moeller 2409.16357v2: complete section 3, including all
+  coefficients of Theorem 3.2, alpha-sign equivalence in Remark 3.4,
+  complete Proposition 3.7 proof, Corollary 3.9 and the Gauss normalization
+  remarks/examples; section 2.2 and the preceding equivariantization
+  definitions. The nondegeneracy theorem cited in Proposition 3.8 remains
+  prior; its original GNN proof was not re-audited.
+
+* Edie-Michell, NSF author PDF corresponding to 2002.03220: complete
+  Lemma 2.16 proof, Remark 2.17, the adjacent full description of functorial
+  equivariantization and its 1-/2-morphisms, and section 4.2 through the
+  complete Lemmas 4.6-4.8 supplied proofs. I did not audit the earlier
+  planar-algebra gauge-triviality proof used to obtain the cyclic upper
+  bound; the present exhaustion argument does not rely on that upper bound.
+
+* DGNO 0906.0620v3: section 4.4.3-4.4.7, including Theorem 4.44 and its
+  complete supplied proof through K3, Lemmas 4.47-4.54, and the regular-
+  algebra module model and complete Proposition 4.55 proof. The earlier
+  ordinary equivariantization/de-equivariantization theorems invoked there
+  are used as cited prior, not re-proved from first principles.
+
+* Barkeshli-Cheng 1706.09464v3: relevant localization constraints from
+  section IV, the gauging-sign comparison, complete sections VI.B-VI.C,
+  in particular equations (88), (94)-(99) and the explicit deferral of the
+  noncoprime family. I had read the relevant section IV.F comparison in the
+  proposal audit. This source already includes a noncyclic exponent-three
+  root; no first-noncyclic-example novelty is available.
+
+* Stroemberg 1108.0202v1: section 2 odd-primary Jordan statements and
+  conventions, equation (2.1), Lemma 2.1 and Remark 2.2. Their rank and
+  determinant classification is standard cited prior. I did not re-audit
+  the entire Weil-representation theorem or every Gauss-sum formula.
+
+* Barkeshli-Bonderson-Cheng-Jian-Walker 1612.07792v1: complete section
+  VII.B handle/gluing derivation, equations (184),(191), the time-reversal
+  convention in (12), and the adjacent anomaly-coordinate discussion.
+  I did not audit the entire general state-sum construction. The
+  unoriented bordism classification is standard prior, not new here.
+
+For the remaining prior distinctions I checked BJLP 1811.00434v2
+Theorem 3.7 and its complete supplied splitting proof and the surrounding
+definitions (these were also read in earlier work); Plavnik-Sanford-Sconce
+2303.17843v3 Theorem 7.1 and its supplied equivalence/sign-removal proof;
+and Wen-Schaefer-Nameki 2603.28720v3 sections IV.3 and VII.5, including
+their different declaration that the TY generator itself is antilinear.
+None supplies the classification of external antiunitary symmetries of
+the fixed COMPLEX gauged category in this account.
+
+3. Construction and exhaustion of the full semilinear symmetry 2-group
+
+I checked all of sections 2-3, including the m,m coefficient and ribbon
+condition. Let q=Q^(1/2), alpha^2=nu G(q^-1), beta=nu/alpha. For a
+metric anti-isometry h, q(ha)=conjugate(q(a)); its existence makes G(q^-1)
+real and hence d=nu G(q^-1)=+/-1. All skeletal associators are preserved
+by semilinear relabelling, including the real coefficient nu/sqrt(N) in
+the Fourier matrix. The missing crossed constraint has value d on m
+and 1 on A: conjugate(alpha)=d alpha and conjugate(beta)=d beta.
+This checks both crossed braiding and positive ribbon compatibility.
+The constraints compose strictly because d is real and d^2=1.
+
+Exhaustion genuinely uses the FULL functorial theorem. The unique
+nontrivial invertible b must be fixed. Identifying an individual
+restriction on Rep(C2) with its standard linear or conjugate-linear
+restriction has exactly two choices. No coherent equivariant structure
+on 1+b for the WHOLE time-reversal action is assumed. DGNO then lifts
+each such individually marked functor. Edie-Michell's normalization
+removes all object-fixing TY tensorators. The only residual monoidal
+automorphism of the TY identity is the odd sign z, and the crossed
+braiding uniquely forces the residual commutation constraint.
+
+After forgetting the restriction identification, two normalized
+functors can be isomorphic only for k=h or k=-h. Restriction +1 gives
+the two transformations 1,z; restriction -1 gives U,zU, where
+U_(V,v)=v:T_g(V,v)->(V,v). Crucially U_b=-1: it is not a 2-morphism
+OVER the specified Rep(C2). The passage through marked functors thus
+does not discard the transformation responsible for the affine action
+on fractionalizations.
+
+I independently checked the horizontal relations U^2=z^2=1, Uz=zU.
+For linear h, U commutes with T_h. For antilinear h, the equivariance
+map of T_h(V,v) is F_h(v) psi^-1, whereas applying F_h to U gives
+F_h(v). Their ratio is precisely z^epsilon, d=(-1)^epsilon.
+This verifies the entire crossed module
+
+  C2_u x C2_z --> O^pm(A,Q),  u |-> -I, z |-> I,
+  h.u = u z^(epsilon w(h)), h.z=z.
+
+The Peiffer identities hold because -I is central and has even parity.
+A section of O^pm/{+/-I} has central factor set c; its lifted
+compositors U^c have associator defect z^(epsilon w cup c), giving
+the asserted Postnikov class. The action on pi_1=<z> is trivial.
+All displayed data are unitary. Monoidal isomorphisms between the
+unitary functors may be taken unitary by polar decomposition; their
+positive monoidal norm has to be trivial. No extra dagger data remain.
+
+4. Coherent actions and the affine unmarked quotient
+
+By the preceding exhaustion pi_0=O^pm/{+/-I}. An antilinear class is
+involutive exactly when r^2=I or -I, globally. The equivalent union-of-
+two-kernels argument in the account is valid for every finite A: a
+group cannot be a union of two proper subgroups. In particular the
+choice of square sign cannot be made independently at different primes.
+
+For r^2=I the two square trivializations are z^k; for r^2=-I they are
+z^k U. The C2 coherence comparison is trivial in the first case and
+z^epsilon in the second. Since the norm of either automorphism of T_r
+is 1, the two coherent choices remain distinct before unmarked
+conjugation. Thus H^3 obstruction is nonzero exactly for r^2=-I,d=-1.
+
+I checked the representative-change norm rather than treating the
+two structures as an invariant two-element set. Write a square
+compositor in the crossed module as u^a z^k, r^2=(-I)^a. Changing r to
+-r uses u, whose norm under an antilinear r is u(r.u)=z^epsilon.
+It therefore sends k to k+epsilon. A unitary h fixes u,z and simply
+conjugates r. This gives exactly
+
+  (r,s) ~ (h r h^-1,s),  (r,s) ~ (-r,d s).
+
+These equivalences exhaust all weak-action equivalences, since the
+functors and their 2-morphisms have already been exhausted. The boson
+square is +1 for r^2=I and -1 for r^2=-I because U_b=-1. In particular
+the negative boson Kramers case is not accidentally excluded by the
+absence of an equivariant regular algebra.
+
+5. Arbitrary odd-primary forms, mixed scales and orbit counts
+
+I checked the whole linking-form proof in section 5, including both
+directions of the extension-ring correspondence. At an odd-residue DVR,
+a maximal-order pairing gives a maximal-order diagonal pivot by using
+x,y,x+y and the invertibility of 2. Orthogonal splitting iterates on
+non-free finite modules. Equal-scale forms are classified by rank and
+unit determinant, and the stated correction -M^-1 E/2 lifts residue
+isometries. The intrinsic layers
+
+  Delta_k=L[p^k]/(L[p^(k-1)]+p L[p^(k+1)])
+
+with pairing p^(k-1)B are valid: each denominator pairs to zero against
+L[p^k] after rescaling. A Jordan splitting leaves only the scale-k
+summands. This proves uniqueness of the scale data without assuming an
+operator-stable original Z_p splitting. The same proof works over the
+unramified extension DVR.
+
+Self-reversal changes the scale determinant by (-1)^n. Consequently
+exactly the constituents at p=3 mod 4 require n even.
+
+For an anti-isometry J with J^2=-I, B(Jx,y)=B(x,Jy). At a split prime,
+the etale idempotents give an ORDERED orthogonal pair of metric
+eigenspaces. For rank n at each scale its possibilities number
+1+1+2(n-1)=2n; determinants multiply to the given determinant.
+
+At p=3 mod 4, set O=Z_p[i], K=Q_p(i). The formula
+
+  beta(x,y)=(B(x,y)-i B(Jx,y))/2 in K/O
+
+is symmetric O-bilinear and Tr(beta)=B. Its nondegeneracy follows
+from that of B. Conversely if Tr(beta)(x,y)=0 for every y, testing
+also iy forces both coordinates of beta(x,y) to vanish, so its trace
+is nondegenerate as well. This supplies the converse implicit in the
+account and uses the perfect unramified trace. Thus it is a genuine
+groupoid equivalence even for non-free modules and mixed scales.
+
+A scale-k rank-m form over O with determinant D_ext has base rank 2m
+and determinant (-1)^m Norm(D_ext). In rank one this is the matrix
+[[a,-b],[-b,-a]] for coefficient a+bi, whose determinant is
+-(a^2+b^2). Norm sends the two unit square classes bijectively to
+those of Z_p. Hence every even-rank base constituent occurs exactly
+once. Coefficient conjugation preserves the square class and supplies
+the isometry conjugating J to -J. This proves the asserted unique
+nonsplit-primary orbit, including all scales, and existence for every
+self-reverse Q. It is symmetric bilinear extension theory, not a
+mistaken Hermitian classification.
+
+For r^2=I the idempotents split A into two isotropic perfectly paired
+summands. Odd order makes Q trivial on both. This is exactly a
+hyperbolic metric group H(B), not just a metabolic group. Half the
+underlying scale multiplicities determines B; all such r are
+orthogonally conjugate. Identifying B symmetrically with its dual
+gives an isometry conjugating r to -r.
+
+At split constituents, negation exchanges the two eigenspaces at
+EVERY constituent SIMULTANEOUSLY. A fixed ordered-pair isometry class
+requires n even and equal determinant classes, hence square total
+determinant; there are two choices. Thus the fixed-point count is
+F=2^|S| when these conditions hold, otherwise 0, and the total
+square-minus-one sign-orbit count is (P+F)/2, P=product_S(2n).
+For d=1 both structures survive, giving P+F. The single hyperbolic
+square-plus-one orbit adds 2 for d=1; for d=-1 its two structures
+are exchanged by the isometry sending r to -r and add only 1.
+This verifies the ENTIRE stated count, including empty S.
+
+6. Local Kramers comparison and every anomaly value
+
+The global dimension is 4N, so the indicator denominator is 2sqrt(N).
+The two defects have cancelling opposite twists; the CP2 numerator
+reduces to 2 sum_a Q(a). This gives G(Q), with no missing factor.
+
+When r^2=-I,d=1, no nonzero inversion orbit is fixed. On a fixed
+defect with equivariance e, the functor acts on scalars by conjugation
+and fixes its skeletal object, so the local square really is s e.
+The boson has square -1, cancelling the vacuum contribution. Hence
+RP4=beta s; choosing beta=1 identifies the twist-+1 defect and makes
+its local Kramers sign s. This checks the paper's invariant convention,
+not just an arbitrary eta component. The two structures give opposite
+RP4 signs, while CP2=G(Q).
+
+For r^2=I, Q=H(B), N=|B|^2 and both Gauss sums are +1. The fixed
+nonzero inversion orbits lie in the two isotropic eigenspaces, number
+|B|-1, and have twist and local square +1. For an orbit with ra=-a,
+the actual simple-object identification is the real swap of its two
+summands, whose square is +1; thus no omitted local Kramers sign
+appears. The neutral numerator is 2|B|. If d=-1 the defects are
+exchanged. If d=1 they are fixed with equal square sign and opposite
+twists, so cancel. RP4=CP2=+1 in every square-plus-one case.
+
+The prior bordism coordinates are complete here: Omega_4^O=(C2)^2,
+with RP4 and CP2 independent, as detected for example by w1^4,w2^2.
+This uses the stated invertible-anomaly framework. It does not infer
+localization coherence from a numerical indicator or assert microscopic
+realizability. All claimed signs have been checked.
+
+7. Prescribed noncyclic control
+
+For A=(Z/9)^2, Q=zeta_9^(x^2+y^2), the displayed J has
+J^2=J^tJ=-I modulo 9. Irreducibility modulo 3 rules out a stable cyclic
+order-9 summand. The sole constituent has n=2,D=1; hyperbolicity
+requires D=-1, a nonsquare modulo 3. Each unit quadratic Gauss sum
+modulo 9 equals 3, by grouping its three nonzero square residues.
+Thus G(Q)=G(Q^-1/2)=1, d=nu, P=F=1. The classification gives zero
+coherent actions for nu=-1 and two for nu=+1, both with boson square
+-1, and anomalies (+1,+1),(+1,-1). Every part follows exactly without
+the author's finite matrix counts. This is a test of the uniform
+theorem, not its substitute.
+
+8. Whole novelty, utility and recommendation
+
+The crossed coefficients, strict inversion, positive ribbon choice,
+alpha-sign change, ordinary TY tensorator normalization, DGNO descent,
+odd-primary rank/determinant classification and anomaly indicators are
+all PRIOR. The cyclic square-minus-one root/sign mechanism is already
+Barkeshli-Cheng's; their noncyclic exponent-three example is also prior.
+BJLP's coherent-algebra splitting theorem and the real-TY constructions
+solve different questions and do not supply the bulk classification.
+The account attributes these correctly.
+
+I checked the directly relevant primary sections and made additional
+targeted literature searches for metaplectic antiunitary symmetries,
+fractionalization, TY symmetry 2-groups and anti-isometry classifications.
+I did not locate the WHOLE result in those sources: an exhaustive
+semilinear braided symmetry 2-group together with the affine unmarked
+C2 action law, arbitrary-primary existence/orbit/count formulas and
+both anomalies. Absence of a matching search result is not alone my
+novelty justification; the substantive distinction from the checked
+prior endpoints is the full exhaustion plus the combined arithmetic
+classification. The underlying linking-form techniques should remain
+credited as standard, not advertised as a new norm theorem.
+
+The result answers a complete symmetry-enrichment classification for
+an unbounded, structurally important family. It distinguishes a bulk
+time-reversal obstruction from failure of equivariant boson
+condensation, detects the hyperbolic-versus-metabolic distinction,
+and prevents the false universal doubling of fractionalization counts
+after unmarked conjugation. These are useful conclusions unavailable
+from modular indicators or the cyclic examples alone. The mod-9
+control demonstrates new scope but is not the significance argument.
+
+I recommend ONE paper containing the entire theorem and its
+consequences, with the prior boundary kept explicit. The short
+semilinear scalar calculation alone would not justify this verdict;
+the exhaustive all-primary unmarked classification does. No theorem
+strengthening, extra example paper or new research allocation is
+needed to repair this fixed account.

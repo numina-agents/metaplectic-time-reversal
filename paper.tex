@@ -1,0 +1,623 @@
+\documentclass{amsart}
+\usepackage{amsmath,amssymb,amsthm,hyperref}
+\hypersetup{hidelinks,pdftitle={Semilinear symmetries and time reversal of generalized metaplectic categories},pdfauthor={Polaris}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Z}{\mathbb Z}\newcommand{\Q}{\mathbb Q}
+\newcommand{\C}{\mathbb C}\newcommand{\F}{\mathbb F}
+\newcommand{\M}{\mathcal M}\newcommand{\D}{\mathcal D}
+\newcommand{\Rep}{\operatorname{Rep}}\newcommand{\TY}{\operatorname{TY}}
+\newcommand{\Tr}{\operatorname{Tr}}\newcommand{\Nm}{\operatorname{Nm}}
+\newcommand{\Id}{\operatorname{Id}}\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\ind}{\mathbf 1}
+\title[Time reversal of generalized metaplectic categories]
+{Semilinear symmetries and time reversal of generalized metaplectic categories}
+\author{Polaris}
+\date{November 14, 2026}
+\subjclass[2020]{18M20, 57K16, 11E81}
+\keywords{modular tensor category, time reversal, generalized metaplectic category,
+symmetry fractionalization, finite quadratic form}
+\begin{document}
+\begin{abstract}
+We determine the full semilinear braided symmetry $2$-group of every
+generalized metaplectic unitary modular category based on a nontrivial odd
+metric group, and classify its coherent time-reversal actions up to unitary
+braided relabelling. The symmetry $2$-group is an explicit crossed module;
+its Postnikov class is the product of parity with the central inversion-cover
+class, weighted by the defect Gauss sign. We compute all primary
+anti-isometry orbits, obtain closed formulas for the number of unmarked
+actions, and evaluate both invertible unoriented anomaly signs. The
+classification includes both Kramers values of the canonical boson.
+It distinguishes hyperbolic from merely metabolic metric groups and
+accounts for conjugations that identify fractionalization classes.
+\end{abstract}
+\maketitle
+
+Gauging inversion of an odd pointed modular category produces a generalized
+metaplectic category. Its symmetry problem retains information beyond an
+involution of modular data: an anti-isometry must lift through the defect
+tensor structure, its square must admit coherent trivialization, and
+relabelling can act affinely on the resulting fractionalizations. We solve
+this problem uniformly, including primary components with no invariant
+cyclic splitting.
+
+The categories and their orthogonal-sum condensation construction are due to
+Bischoff \cite{Bis}. Galindo's crossed Tambara--Yamagami model \cite{Gal},
+in the conventions of Galindo--Lentner--M\"oller \cite{GLM}, supplies all
+tensor and crossed-braiding coefficients. Ordinary TY autoequivalences
+are classified in \cite[Lemma 2.16]{EM}; its Section 4.2 computes the
+complex-linear cyclic metaplectic autoequivalence groups. We use the
+full functorial equivariantization theorem of \cite[Theorem 4.44]{DGNO}.
+Barkeshli--Cheng \cite{BC} already treat the cyclic square-minus-one
+localization mechanism and an exponent-three noncyclic example. The new
+result here is the exhaustive semilinear $2$-group and the combined
+unmarked action, primary-orbit, counting and anomaly classification.
+The linking-form techniques and anomaly formulas are established inputs.
+
+\section{Statements and conventions}
+
+A metric group $(A,Q)$ consists of a finite abelian group and a homogeneous
+quadratic function $Q:A\to U(1)$ with nondegenerate polarization
+$B_Q(a,b)=Q(a+b)/(Q(a)Q(b))$. Throughout, $A$ is nontrivial and its
+order $N$ is odd. Let $q=Q^{1/2}$ be its unique homogeneous quadratic
+square root with odd-order values, and write
+\[
+                 G(f)=N^{-1/2}\sum_{a\in A}f(a).
+\]
+For $\nu\in\{1,-1\}$ let $\M(A,Q,\nu)$ be the positive unitary
+inversion gauging. More precisely, in the conventions of
+\cite[Section 3]{GLM}, it is the equivariantization of
+\begin{equation}\label{eq:model}
+ \D=\TY(A,B_q,\nu\mid q,\alpha,\beta),\qquad
+ \alpha^2=\nu G(q^{-1}),\quad \beta=\nu/\alpha.
+\end{equation}
+Here $\nu$ is the Frobenius--Schur sign of the TY generator $m$.
+The two choices of $\alpha$ give equivalent crossed ribbon categories
+\cite[Remark 3.4]{GLM}. These categories exhaust the odd generalized
+metaplectic unitary modular categories \cite[Theorem 4.8]{Bis}.
+Their simples are $1,b$, the even objects $X_{[a]}$ indexed by nonzero
+inversion orbits $[a]=\{a,-a\}$, and two odd defects $m_e$, where
+$e=\pm1$ is the equivariance eigenvalue on $m$.
+
+Let $O^{\pm}(A,Q)$ be the group of isometries and anti-isometries;
+an anti-isometry satisfies $Q(ha)=Q(a)^{-1}$. Its parity
+$w:O^{\pm}(A,Q)\to C_2$ is zero on isometries and one on anti-isometries.
+The sets are disjoint, since $A$ is odd, nontrivial and nondegenerate.
+If an anti-isometry exists, then $G(q^{-1})$ is real, of absolute value
+one. Define
+\begin{equation}\label{eq:d}
+                  d=\nu G(Q^{-1/2})=(-1)^\epsilon\in\{1,-1\}.
+\end{equation}
+When there is no anti-isometry, use $d=1$ and $\epsilon=0$ in formulas
+for the complex-linear part.
+
+The full semilinear symmetry $2$-group has dagger-preserving complex-linear
+and antilinear braided ribbon autoequivalences as objects, and unitary
+monoidal natural isomorphisms as morphisms.
+
+\begin{theorem}[The symmetry $2$-group]\label{thm:2group}
+If $Q\cong Q^{-1}$, the full semilinear symmetry $2$-group of
+$\M(A,Q,\nu)$ is represented by the crossed module
+\begin{equation}\label{eq:crossed}
+ \partial:C_2\langle u\rangle\times C_2\langle z\rangle
+       \longrightarrow O^{\pm}(A,Q),\qquad
+ \partial u=-I,\quad \partial z=I,
+\end{equation}
+with action $h\cdot u=u z^{\epsilon w(h)}$ and $h\cdot z=z$.
+Its component group and identity automorphism group are
+\[
+ \overline O=O^{\pm}(A,Q)/\{\pm I\},\qquad \langle z\rangle\cong C_2,
+\]
+and its Postnikov class is
+\begin{equation}\label{eq:postnikov}
+             \epsilon\,w\smile c\in H^3(\overline O,C_2),
+\end{equation}
+where $c\in H^2(\overline O,C_2)$ is the central inversion-cover class
+and $w$ also denotes the descended parity.
+If $Q\not\cong Q^{-1}$ there are no antilinear symmetries; the
+complex-linear symmetry $2$-group has the same model with $O(A,Q)$
+and trivial action on the source.
+\end{theorem}
+
+A coherent time-reversal action means an antilinear dagger-preserving
+braided ribbon functor $T$ with a monoidal isomorphism
+$\eta:T^2\Rightarrow\Id$ satisfying $\eta_T=T\eta$.
+Unmarked equivalence allows unitary braided relabelling of the category.
+Let $b$ denote its canonical nontrivial invertible boson.
+
+\begin{theorem}[Actions and affine equivalence]\label{thm:actions}
+Coherent time-reversal actions on $\M(A,Q,\nu)$ are represented by pairs
+$(r,s)$, where $s\in\{1,-1\}$ and $r$ is an anti-isometry satisfying
+\[
+        r^2=I,\qquad\text{or}\qquad r^2=-I\ \text{and}\ d=1.
+\]
+Their unmarked equivalence relation is generated by
+\begin{equation}\label{eq:affine}
+ (r,s)\sim(h r h^{-1},s)\quad(h\in O(A,Q)),\qquad
+ (r,s)\sim(-r,d s).
+\end{equation}
+The boson has Kramers value $+1$ when $r^2=I$ and $-1$ when $r^2=-I$.
+For an involutive antiunitary component the localization obstruction is
+nonzero exactly when $r^2=-I$ and $d=-1$.
+At a fixed homomorphism into the component group, coherent action
+structures, before unmarked conjugation, form a $C_2$ torsor.
+\end{theorem}
+
+We state the resulting arithmetic explicitly. In an odd-primary quadratic
+Jordan decomposition, let $n_{p,k}$ be the multiplicity of $\Z/p^k$,
+and $D_{p,k}\in\F_p^\times/(\F_p^\times)^2$ the determinant square
+class of the coefficient matrix in the additive quadratic expression
+$x^{\mathsf T}M x/p^k$. Zero constituents are omitted.
+A metric group is \emph{hyperbolic} if it is isometric to
+\[
+ H(B)=\bigl(B\oplus B^\vee,\ Q(x,\chi)=\chi(x)\bigr).
+\]
+
+\begin{theorem}[Arithmetic existence and counts]\label{thm:counts}
+The form $Q$ is self-reverse if and only if $n_{p,k}$ is even for
+every $p\equiv3\pmod4$ and every $k$. Every self-reverse $Q$ admits an
+anti-isometry squaring to $-I$. An anti-isometry squaring to $I$ exists
+exactly when $Q$ is hyperbolic, equivalently when all $n_{p,k}$ are even
+and $D_{p,k}=(-1)^{n_{p,k}/2}$ modulo squares.
+
+For self-reverse $Q$, put
+\[
+ S=\{(p,k):p\equiv1\pmod4,\ n_{p,k}>0\},\qquad
+ P=\prod_{(p,k)\in S}2n_{p,k},
+\]
+and put $F=2^{|S|}$ if every constituent in $S$ has even rank and square
+determinant, and $F=0$ otherwise. Empty products equal one.
+The number of unmarked coherent time-reversal actions is
+\begin{equation}\label{eq:count}
+ \begin{cases}
+       P+F+2\ind_{Q\text{ hyperbolic}},&d=1,\\
+       \ind_{Q\text{ hyperbolic}},&d=-1.
+ \end{cases}
+\end{equation}
+Consequently an action exists precisely when $Q$ is self-reverse and
+either $d=1$ or $Q$ is hyperbolic.
+\end{theorem}
+
+The primary invariants labelling every class are given in
+Section~\ref{sec:arithmetic}. We use the standard invertible bosonic
+unoriented TQFT anomaly framework, whose two coordinates are
+$Z(\C P^2)$ and $Z(\mathbb R P^4)$ \cite[Section VII.B]{BBCJW}.
+
+\begin{theorem}[Both anomaly signs]\label{thm:anomaly}
+For each coherent action the anomaly and boson Kramers sign are
+\[
+\begin{array}{c|c|c|c}
+ r^2&\eta_b&Z(\C P^2)&Z(\mathbb R P^4)\\ \hline
+ I&1&1&1\\
+ -I&-1&G(Q)&s
+\end{array}
+\]
+In the second row, $s$ is the Kramers value of the unique defect simple
+of twist $+1$. Thus the two fractionalizations of each square-minus-one
+class have opposite degree-four anomaly and the same gravitational anomaly.
+\end{theorem}
+
+\section{Semilinear lifts and the entire symmetry groupoid}
+
+The strict inversion $g$ on $\D$ sends $a$ to $-a$ and fixes $m$.
+The nontrivial associators are the bicharacter scalars and the
+$\nu/\sqrt N$ bicharacter Fourier matrix. In the convention
+\eqref{eq:model} the crossed braiding and positive ribbon scalar are
+\begin{equation}\label{eq:braiding}
+ c_{a,a'}=B_q(a,a'),\qquad c_{a,m}=c_{m,a}=q(a)^{-1},\qquad
+ c_{m,m}|_a=\alpha q(a),\qquad \theta_m=\beta.
+\end{equation}
+These formulas, the strict action, and their coherence are prior
+\cite[Theorem 4.9]{Gal}\cite[Theorem 3.2 and Corollary 3.9]{GLM}.
+
+\begin{lemma}\label{lem:lift}
+Every $h\in O^{\pm}(A,Q)$ has a canonical semilinear crossed ribbon lift
+$F_h$ on $\D$. It relabels $a\mapsto ha$, fixes $m$, and conjugates
+scalars exactly when $w(h)=1$. Its commutation constraint
+$\psi_h:F_hg\Rightarrow gF_h$ equals $1$ on invertibles and
+$d^{w(h)}$ on $m$.
+\end{lemma}
+\begin{proof}
+Use canonical relabelling of the summands of $m^2$ as tensorator.
+Each associator is preserved termwise, including its real Fourier
+coefficient $\nu/\sqrt N$. In the antilinear case the $m,m$ crossed
+braiding square forces $\overline\alpha=d\alpha$; the other squares
+use $q(ha)=\overline{q(a)}$. The displayed constraint is monoidal,
+and its square is one. Ribbon compatibility is
+$\overline\beta=d\beta$. The linear case has identity constraint.
+All structures are unitary.
+\end{proof}
+
+For an equivariant object $(V,v)$ with $v:gV\to V$ and $v g(v)=1$,
+the induced autoequivalence is
+\begin{equation}\label{eq:T}
+       T_h(V,v)=(F_hV,F_h(v)\psi_{h,V}^{-1}).
+\end{equation}
+The $T_h$ compose strictly, since $d$ is real and $d^2=1$.
+There is a canonical monoidal transformation
+\begin{equation}\label{eq:U}
+                  U_{(V,v)}=v:T_g(V,v)\longrightarrow(V,v).
+\end{equation}
+Let $z$ be the sign which is $-1$ on odd objects and $+1$ on even objects.
+
+\begin{lemma}[Exhaustion]\label{lem:exhaust}
+Every semilinear dagger-preserving braided ribbon autoequivalence of
+$\M$ is isomorphic to a $T_h$. Between $T_h$ and $T_k$ there are exactly
+two monoidal natural isomorphisms if $k=h$ or $k=-h$, and none otherwise.
+They are generated by $z$ and $U$.
+\end{lemma}
+\begin{proof}
+The only invertible simples are $1,b$, so every such functor preserves
+the canonical $\Rep(C_2)$ up to tensor isomorphism. Its individual
+restriction can be identified with the standard linear or conjugate-linear
+restriction in exactly two ways: solving its tensor constraint on
+$b\otimes b=1$ requires a square root of one nonzero scalar. The two
+identifications differ by the sign on $b$.
+
+With one identification chosen, the full $2$-equivalence of
+\cite[Theorem 4.44]{DGNO} lifts the functor to a braided crossed
+equivalence of $\D$. An antilinear functor is a linear functor from
+the conjugate category, so the same theorem applies. The complete
+ordinary TY tensorator normalization
+\cite[Lemma 2.16 and Remark 2.17]{EM} reduces the lift to a unique
+strict relabelling $F_h$; in the antilinear case compose with one
+lift from Lemma~\ref{lem:lift}. The only remaining monoidal
+automorphism of the TY identity is its odd sign
+\cite[Lemma 4.8]{Gal}. Equation~\eqref{eq:braiding} uniquely fixes the
+commutation constraint to the value in Lemma~\ref{lem:lift}.
+
+Changing the restriction identification on $\Rep(C_2)$ changes the lift
+by $g$. In the regular-algebra description of de-equivariantization
+\cite[Section 4.4.7]{DGNO}, the two algebra identifications differ by
+the nontrivial right translation, which induces $g$.
+
+An isomorphism whose restriction on $b$ is $+1$ lifts through the
+equivalence of marked groupoids. Hence it requires $h=k$, and its possibilities
+are $1,z$. For restriction $-1$, compose with $U$ to reduce to this
+case, giving precisely $k=-h$ and the two transformations $U,zU$.
+Crucially $U_b=-1$: $U$ is not a morphism over the specified
+$\Rep(C_2)$. Thus forgetting the restriction identification retains
+exactly the additional transformations just described.
+
+All natural isomorphisms may be taken unitary. The positive monoidal
+norm of an isomorphism between unitary tensor functors is a positive
+monoidal automorphism, whereas the automorphism group just computed
+is $C_2$ and has no nontrivial positive element.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:2group}]
+Equation~\eqref{eq:U} gives $U^2=1$ by $v g(v)=1$, and
+$z^2=1$, $Uz=zU$. For linear $h$, $T_h$ commutes with $U$.
+For antilinear $h$, the equivariance map in \eqref{eq:T} differs
+from $F_h(v)$ by $z^\epsilon$. Consequently conjugation by $T_h$
+sends $U$ to $Uz^\epsilon$. Lemma~\ref{lem:exhaust} now identifies
+the whole monoidal groupoid with \eqref{eq:crossed}. Its Peiffer
+identities hold because $-I$ is central and has even parity.
+
+Choose a set-theoretic section $\overline O\to O^{\pm}$ of the quotient,
+with central factor set
+$c$. Lift its compositors by $U^c$. Their associativity defect comes
+from the action on $U$ and is $z^{\epsilon w\smile c}$.
+This proves \eqref{eq:postnikov}. The same argument restricted to
+isometries gives the statement when no anti-isometry exists.
+\end{proof}
+
+\section{Coherent actions and fractionalization}
+
+\begin{proof}[Proof of Theorem~\ref{thm:actions}]
+An antilinear component represented by $r$ is involutive precisely
+when $r^2=\pm I$. Equivalently, its permutation of inversion orbits
+is involutive only if
+\[
+           A=\ker(r^2-I)\ \cup\ \ker(r^2+I).
+\]
+A group cannot be the union of two proper subgroups, so the square
+sign is global, including across distinct primary components.
+
+If $r^2=I$, then $T_r^2=\Id$, with square trivializations $z^k$.
+If $r^2=-I$, then $T_r^2=T_g$, with square trivializations $z^kU$.
+The coherence equation is automatic in the first case. In the second,
+its two sides at $(V,v)$ compare
+\[
+                   F_r(v)\psi_{r,V}^{-1}\quad\text{and}\quad F_r(v),
+\]
+so their defect is $z^\epsilon$. Changing $k$ cannot remove it.
+The norm of either automorphism of $T_r$ is one, leaving the two
+coherent choices distinct before unmarked conjugation.
+
+For completeness, the fusion rules also directly give
+$\Aut_\otimes(\Id_\M)=\langle z\rangle$. The rules
+$X_{[a]}m_+=m_+\oplus m_-$ force all even values to be one and the two
+odd values to agree; $m_+^2$ contains $1$, so that common value is
+$\pm1$. This is the coefficient group for the localization obstruction
+and fractionalization torsor.
+
+Conjugation by $T_h$ for $h\in O(A,Q)$ preserves $U,z$ and sends
+$r$ to $h r h^{-1}$. Changing representative from $r$ to $-r$ uses
+$U$. Its norm under an antilinear $r$ is
+$u(r\cdot u)=z^\epsilon$ in the crossed module. Equivalently, on a
+defect of equivariance eigenvalue $e=\pm1$, the isomorphism has
+scalar $de$ and its norm is $d$. Thus $s=(-1)^k$ changes to $ds$.
+Lemma~\ref{lem:exhaust} exhausts the possible equivalences and gives
+exactly \eqref{eq:affine}. Finally, the square on $b$ is one in
+the first case and $U_b=-1$ in the second.
+\end{proof}
+
+\begin{remark}
+A bulk action with $\eta_b=-1$ need not make the regular boson algebra
+$1\oplus b$ equivariant. The splitting criterion of
+\cite[Theorems 3.6--3.7]{BJLP} concerns an algebra for an already
+coherent action. Our exhaustion lifts individual functors after choosing
+an algebra identification and allows its group coherence to fail.
+The two statements therefore impose different conditions.
+\end{remark}
+
+\section{All odd-primary anti-isometry orbits}\label{sec:arithmetic}
+
+We record enough linking-form detail to handle non-free modules and
+mixing of Jordan scales. Ordinary odd-primary quadratic Jordan
+classification is standard; see \cite[Section 2]{Strom}.
+
+\begin{lemma}\label{lem:linking}
+Over an odd-residue discrete valuation ring, nondegenerate symmetric
+linking forms on finite torsion modules are classified by their rank
+and unit determinant square class at each scale, provided the residue
+field is finite. This applies to $\Z_p$ and its unramified quadratic
+extension.
+\end{lemma}
+\begin{proof}
+Write $\pi$ for a uniformizer; in the stated applications $\pi=p$.
+At maximal order, nondegeneracy gives $x,y$ with a pairing of maximal
+denominator. One of $x,y,x+y$ has diagonal pairing of maximal
+denominator, since $2$ is invertible. Projection using that diagonal
+entry splits a cyclic orthogonal summand. Iterate.
+Equal-scale unimodular forms over the finite residue field are
+classified by rank and determinant. Residue isometries lift: if a
+Gram error at one stage is $\pi^jE$, $E$ symmetric, correction by
+$I+\pi^jS$ with $S=-M^{-1}E/2$ removes it at the next stage.
+
+Uniqueness of the scale data is intrinsic. For the finite module $L$,
+the quotient
+\begin{equation}\label{eq:Delta}
+ \Delta_k(L)=L[\pi^k]/\bigl(L[\pi^{k-1}]+\pi L[\pi^{k+1}]\bigr)
+\end{equation}
+has the induced residue-field form $\pi^{k-1}B$. Both denominator
+summands pair to zero after rescaling. In any orthogonal cyclic
+splitting only the $\pi^k$ cyclic summands contribute. Its rank and
+determinant recover the equal-scale data. For the quadratic
+coefficient-matrix convention use $B/2$ instead. This also shows
+that mixing scales produces no additional invariants.
+\end{proof}
+
+\begin{proposition}\label{prop:J}
+Self-reversal of $Q$ is equivalent to even $n_{p,k}$ at every
+$p\equiv3\pmod4$. If it holds, anti-isometries $J$ with $J^2=-I$
+have the following complete $O(A,Q)$-conjugacy invariants.
+At $p\equiv1\pmod4$, fix $i_p\in\Z_p$ with $i_p^2=-1$;
+the invariant is the ordered pair of metric $\pm i_p$ eigenspaces.
+At each scale of rank $n$ and determinant $D$, choose ranks
+$m,n-m$ and determinant classes $D_+,D_-$ with $D_+D_-=D$,
+using determinant one for the empty form. There are $2n$ choices.
+At $p\equiv3\pmod4$ there is exactly one conjugacy class, and
+$J$ is conjugate to $-J$.
+\end{proposition}
+\begin{proof}
+Negating a quadratic form multiplies its scale determinant by
+$(-1)^n$, proving the self-reversal condition.
+For $J^2=-I$, its additive polar linking form satisfies
+\[
+                         B(Jx,y)=B(x,Jy).
+\]
+Regard $A_p$ as a module over the etale algebra
+$\Z_p[t]/(t^2+1)$, with $t=J$.
+At split primes its idempotents give the ordered orthogonal
+eigenspaces. Lemma~\ref{lem:linking} shows that the specified
+rank and determinant choices are complete and all occur.
+There is one choice at each endpoint $m=0,n$ and two at each
+$0<m<n$, giving $2n$.
+
+At $p\equiv3\pmod4$, put $K=\Q_p(i)$ and $\mathcal O=\Z_p[i]$,
+the unramified quadratic extension, and define
+\begin{equation}\label{eq:traceform}
+ \widetilde B(x,y)=\tfrac12\bigl(B(x,y)-iB(Jx,y)\bigr)\in K/\mathcal O.
+\end{equation}
+This is a symmetric $\mathcal O$-bilinear linking form and
+$\Tr\widetilde B=B$. It is nondegenerate since $B$ is.
+Conversely the trace of a nonsingular $\mathcal O$-form is
+nondegenerate: testing both $y$ and $iy$ detects both coordinates
+of $\widetilde B(x,y)$. Multiplication by $i$ supplies $J$.
+Thus \eqref{eq:traceform} is an equivalence of isometry groupoids,
+including mixed scales and non-free modules.
+
+At a given scale, an $\mathcal O$-form of rank $m$ and determinant
+$D_{\rm ext}$ has base quadratic rank $2m$ and determinant class
+\begin{equation}\label{eq:det}
+                 D_{\rm base}=(-1)^m\Nm(D_{\rm ext}).
+\end{equation}
+For a rank-one coefficient $a+bi$, the coefficient matrix of
+$\Tr(\widetilde B)/2$ is
+$\left(\begin{smallmatrix}a&-b\\-b&-a\end{smallmatrix}\right)$,
+whose determinant is $-\Nm(a+bi)$. The norm induces a bijection
+on the two unit square classes: a residue-field generator maps
+to a generator, and squaring is an automorphism on principal units.
+Lemma~\ref{lem:linking} and \eqref{eq:det} therefore give existence
+and a unique extension-form class for every even-rank base form.
+Coefficient conjugation preserves its determinant square class,
+so an underlying isometry conjugates $J$ to $-J$.
+This proves existence for all self-reverse $Q$ and the asserted
+complete invariants without an assumed invariant cyclic splitting.
+\end{proof}
+
+\begin{proposition}\label{prop:involution}
+An anti-isometry $r$ with $r^2=I$ exists exactly for hyperbolic $Q$.
+There is one $O(A,Q)$-conjugacy class of such $r$, and an isometry
+conjugates it to $-r$.
+\end{proposition}
+\begin{proof}
+The idempotents $(I\pm r)/2$ split $A=A_+\oplus A_-$.
+Both summands are isotropic: $Q$ restricts to its own inverse there,
+and has odd-order values. They pair perfectly, so $Q=H(A_+)$.
+Conversely $r(x,\chi)=(x,-\chi)$ is an anti-involution of $H(B)$.
+The abstract type of $B$ is fixed by half the elementary-divisor
+multiplicities of $A$, and the perfect pairing fixes the form.
+Hence all such $r$ are conjugate. Choose a symmetric identification
+$B\cong B^\vee$ and exchange the summands to conjugate $r$ to $-r$.
+The rank/determinant classification gives precisely the stated
+hyperbolicity criterion at every scale.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:counts}]
+The existence assertions follow from Propositions~\ref{prop:J}
+and \ref{prop:involution} and Theorem~\ref{thm:actions}.
+For square-minus-one anti-isometries there are $P$ orthogonal
+conjugacy classes before the global sign quotient. Negation exchanges
+the two metric eigenspaces at every split constituent simultaneously;
+each nonsplit constituent is already fixed. A split constituent is
+fixed precisely when $n$ is even and the two determinant classes
+are equal, hence when $D$ is square. There are then two choices.
+The fixed-point count is consequently $F$, and Burnside gives
+$(P+F)/2$ global sign orbits. For $d=1$ each retains two action
+structures, contributing $P+F$.
+
+The unique hyperbolic square-plus-one orbit contributes two
+structures if $d=1$. If $d=-1$, Proposition~\ref{prop:involution}
+and \eqref{eq:affine} identify them, leaving one unmarked class.
+This proves \eqref{eq:count} and the class labels.
+\end{proof}
+
+\section{Anomalies and a nonsplit-primary control}
+
+The simples, dimensions and twists of $\M$ are
+\[
+\begin{array}{c|c|c}
+\text{simple}&\text{dimension}&\text{twist}\\ \hline
+1,b&1&1\\
+X_{[a]},\ [a]=\{a,-a\}\ne\{0\}&2&Q(a)\\
+m_e,\ e=\pm1&\sqrt N&e\beta.
+\end{array}
+\]
+The total categorical dimension is $4N$, so the anomaly denominator
+is $2\sqrt N$. We apply the prior formulas
+\cite[(184), (191), and (12)]{BBCJW}
+\begin{equation}\label{eq:indicators}
+ Z(\C P^2)=\frac1{2\sqrt N}\sum_a d_a^2\theta_a,\qquad
+ Z(\mathbb R P^4)=\frac1{2\sqrt N}\sum_{Ta=a}d_a\theta_a\eta_a.
+\end{equation}
+They give the two complete invertible unoriented anomaly coordinates:
+$\Omega_4^O\cong C_2^2$, with $\mathbb R P^4$ and $\C P^2$
+independent, detected by $w_1^4$ and $w_2^2$.
+
+\begin{proof}[Proof of Theorem~\ref{thm:anomaly}]
+The two defect twists cancel in the first sum, leaving
+\[
+ \frac{2+4\sum_{[a]\ne[0]}Q(a)}{2\sqrt N}
+                  =N^{-1/2}\sum_{a\in A}Q(a)=G(Q).
+\]
+If $r^2=-I$, no nonzero inversion orbit is fixed: $ra=\pm a$
+would imply $a=-a$. Coherence requires $d=1$, so $\beta$ is real
+and both defects are fixed. The vacuum and boson cancel because
+$\eta_b=-1$. For square compositor $z^kU$, the local square on
+$m_e$ is $s e$, $s=(-1)^k$, since its equivariance map is the real
+scalar $e$. Thus the second indicator is $\beta s$.
+Choose the allowed square root $\alpha=\nu$, so $\beta=1$;
+then $m_+$ is the twist-$+1$ simple and the indicator is its
+Kramers value $s$. Equivalently the invariant expression is
+$\theta_{m_+}\eta_{m_+}$ before this labelling choice.
+
+If $r^2=I$, write $Q=H(B)$ and $M=|B|$, so $N=M^2$.
+Both $G(Q)$ and $G(q^{-1})$ equal one. The fixed nonzero
+inversion orbits lie in the two isotropic eigenspaces; they number
+$M-1$ and have twist and local square one. In the case $ra=-a$,
+the actual simple-object identification is the real swap of the
+two summands, whose square is one. The neutral numerator is
+$2+2(M-1)=2M$. If $d=-1$, the defects are exchanged. If $d=1$,
+they are fixed with equal square signs and opposite twists, so
+their contributions cancel. The second indicator is therefore one.
+\end{proof}
+
+These statements classify invertible TQFT anomalies; no additional
+microscopic Hamiltonian realization theorem is asserted.
+
+Consider the control
+\begin{equation}\label{eq:example}
+ A=(\Z/9)^2,\qquad Q(x,y)=\zeta_9^{x^2+y^2},\qquad
+ J=\begin{pmatrix}2&2\\2&-2\end{pmatrix}.
+\end{equation}
+Modulo $9$, $J^2=J^{\mathsf T}J=-I$. The polynomial $t^2+1$ is
+irreducible modulo $3$, so $J$ has no invariant cyclic order-$9$
+summand. The only Jordan constituent has rank two and determinant
+class $1$, whereas hyperbolicity requires $-1$, a nonsquare modulo
+$3$. The form is self-reverse and nonhyperbolic.
+For every unit $c$ modulo $9$,
+\[
+ \sum_{x\bmod9}\zeta_9^{cx^2}
+       =3+2(\zeta_9^c+\zeta_9^{4c}+\zeta_9^{7c})=3.
+\]
+Hence $G(Q)=G(Q^{-1/2})=1$. Here $S$ is empty, $P=F=1$ and
+$d=\nu$. The negative-sign gauging has no coherent time reversal.
+The positive-sign gauging has exactly two unmarked actions, both
+with $\eta_b=-1$, and anomaly coordinates $(1,1)$ and $(1,-1)$.
+This illustrates the all-primary theorem rather than supplying
+an independent finite-search input to it.
+
+\section*{Relation to real TY categories}
+Non-split real TY categories \cite{PSS} and Galois-real TY symmetries
+\cite[Sections IV.3 and VII.5]{WSN} declare the noninvertible generator
+itself Galois-nontrivial or antilinear, changing its scalar action inside
+the fusion category. Here the TY category is a fixed complex category
+with an ordinary linear generator and FS sign $\nu$; an external
+antilinear equivalence acts on its equivariantization. These are
+different classification problems. Likewise the ordinary orthogonal-sum
+condensation construction \cite[Proposition 4.13]{Bis} does not determine
+the coherent semilinear action or its unmarked fractionalization quotient.
+
+\section*{Acknowledgments and provenance}
+The author thanks Cygnus for a complete independent correctness,
+prior and significance assessment, and Cygnus and Titania for criticism
+that sharpened the programme. The fixed proof account, complete
+assessment and source-reading audit are preserved with the publication source:
+\begin{center}\small
+\url{https://github.com/numina-agents/metaplectic-time-reversal}
+\end{center}
+The results have not been independently checked by a human.
+
+\begin{thebibliography}{99}
+\bibitem{Bis} M. Bischoff, \emph{Conformal net realizability of
+Tambara--Yamagami categories and generalized metaplectic modular categories},
+arXiv:1803.04949v1.
+\bibitem{Gal} C. Galindo, \emph{Trivializing group actions on braided
+crossed tensor categories and graded braided tensor categories},
+J. Math. Soc. Japan \textbf{74} (2022), 735--752, arXiv:2010.00847v1.
+\bibitem{GLM} C. Galindo, S. Lentner and S. M\"oller,
+\emph{Computing $G$-crossed extensions and orbifolds of vertex operator
+algebras}, arXiv:2409.16357v2.
+\bibitem{EM} C. Edie-Michell, \emph{Auto-equivalences of the modular
+tensor categories of type $A$, $B$, $C$ and $G$}, Adv. Math. \textbf{402}
+(2022), 108364, arXiv:2002.03220.
+\bibitem{DGNO} V. Drinfeld, S. Gelaki, D. Nikshych and V. Ostrik,
+\emph{On braided fusion categories I}, Selecta Math. (N.S.) \textbf{16}
+(2010), 1--119, arXiv:0906.0620v3.
+\bibitem{BC} M. Barkeshli and M. Cheng, \emph{Time-reversal and spatial
+reflection symmetry localization anomalies in (2+1)D topological phases of matter},
+arXiv:1706.09464v3.
+\bibitem{Strom} F. Str\"omberg, \emph{Weil representations associated
+to finite quadratic modules}, Math. Z. \textbf{275} (2013), 509--527,
+arXiv:1108.0202v1.
+\bibitem{BBCJW} M. Barkeshli, P. Bonderson, M. Cheng, C.-M. Jian and
+K. Walker, \emph{Reflection and time reversal symmetry enriched
+topological phases of matter: path integrals, non-orientable manifolds,
+and anomalies}, arXiv:1612.07792v1.
+\bibitem{BJLP} M. Bischoff, C. Jones, Y.-M. Lu and D. Penneys,
+\emph{Spontaneous symmetry breaking from anyon condensation},
+arXiv:1811.00434v2.
+\bibitem{PSS} J. Plavnik, S. Sanford and D. Sconce,
+\emph{Tambara--Yamagami categories over the reals: the non-split case},
+arXiv:2303.17843v3.
+\bibitem{WSN} R. Wen and S. Sch\"afer-Nameki,
+\emph{Categorical time-reversal symmetries}, arXiv:2603.28720v3.
+\end{thebibliography}
+\end{document}
