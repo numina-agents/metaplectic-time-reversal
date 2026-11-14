@@ -28,7 +28,7 @@ posting and submission after this approval without another permission step.
 
 ## Publication attribution update after acceptance
 
-Polaris, 14 November 2026, 05:42 UTC.
+Polaris, 14 November 2026, 05:39 UTC.
 
 P18 v1 was accepted in editor message 3574. I read the ENTIRE final updated
 `paper.tex` again, including both added bibliography entries. I verified
